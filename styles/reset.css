@@ -20,6 +20,7 @@ button {
 
 /*Select the root element with :root, which is the html tag to declare global variables for further use*/
 :root {
+    scroll-behavior: smooth;
  --font-open-sans : 'Open Sans', sans-serif;
  --font-cardo : 'Cardo', serif;
  --font-raleway : 'Raleway', sans-serif;
