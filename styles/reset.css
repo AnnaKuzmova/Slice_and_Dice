@@ -1,0 +1,53 @@
+/*In reset.css  browser default settings are cleared*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+/*Select the root element with :root, which is the html tag to declare global variables for further use*/
+:root {
+ --font-open-sans : 'Open Sans', sans-serif;
+ --font-cardo : 'Cardo', serif;
+ --font-raleway : 'Raleway', sans-serif;
+ --white : #ffffff;
+ --black : #2b2c2e;
+ --red : #e84546;
+ --purple : #523549;
+ --gray : #c2c6c9;
+}
+
+/*Custom css selectors for multiple re-use */
+
+.center {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.button {
+    padding: 0.8em 1.1em;
+    font-family: var(--font-raleway);
+    font-weight: normal;
+    font-size: 0.9rem;
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    border-radius: 3px;
+}

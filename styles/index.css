@@ -1,0 +1,62 @@
+/*Importing reset.css in case is didnt load from the html via link tag*/
+@import url("styles/reset.css");
+
+/*Styling the header and everything in the header tag*/
+#site-main-header {
+    background-image: url('/images/header.jpg');
+    padding-bottom: 5em;
+}
+
+.flex.header-nav {
+    position: relative;
+    justify-content: space-between;
+    padding: 1.5em;
+}
+
+.header-nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--white);
+    opacity: 0.5;
+}
+
+.navigation-list.flex {
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.navigation-list.flex li a {
+    padding: 0.3em 0.5em;
+    font-family: var(--font-raleway);
+    font-weight: bold;
+    font-size: .9rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.main-header-headings {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.main-header-headings h1 {
+    margin-bottom: 0.3em;
+    font-family: var(--font-open-sans);
+    font-weight: bold;
+    font-size: 2.9rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.main-header-headings p {
+    margin-bottom: 2.5em;
+    font-family: var(--font-raleway);
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: var(--white);
+}
