@@ -160,7 +160,62 @@
    
 }
 
+/*Styles for the team memeber's holder and their personal cards*/
+.flex.team-members-holder {
+    padding: 5em 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.team-member-card {
+    width: 23%;
+    color: var(--black);
+}
+
+.team-member-card img {
+    margin-bottom: 0.8em;
+}
+
+.team-member-card h3 {
+    font-family: var(--font-raleway);
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.team-member-card span {
+    display: inline-block;
+    margin-bottom: 0.8em;
+    font-family: var(--font-raleway);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.01rem;
+    color: var(--red);
+}
+
+.team-member-card p {
+    font-family: var(--font-raleway);
+    font-weight: normal;
+    margin-bottom: 1.3em;
+}
+
+i.fab {
+    display: inline-block;
+    width: 10%;
+    margin-right: 0.5em;
+    padding: 0.5em 0;
+    text-align: center;
+    color: var(--gray);
+    border: var(--gray) 1px solid;
+}
+
+
+
+
+
+
+/* Simple animation for the work-images/gallery's text*/
 @keyframes slideUp {
     from {
         opacity: 0;

@@ -95,4 +95,63 @@ window.addEventListener('load', function(){
             divElement.appendChild(sectionElement)
             workImagesHolder.appendChild(divElement)
         })
+
+        /*Creatinf array of objects for team members, each object hold data about a team member. Then fill the html container via js, to avoid hardcoding data in the future.*/
+         let arrayOfTeamMembers = [
+             {
+                 name : "Ruth Woods",
+                 imgSrc : "/images/person1.jpg",
+                 position : "Founder, CEO",
+                 description : "Sole uomo mai puo essa pone onda ben. Del temo sue pie senz una vidi. Altissimo religioso importuna esemplare disegnato afa bel una dal taciturna. Sai cio ora oro soli dire rete pini usci. Ne struggeva ginocchia conquista me rapimento. "
+             },
+             {
+                name : "Timothy Reed",
+                imgSrc : "/images/person2.jpg",
+                position : "co-founder, developer",
+                description : "Sole uomo mai puo essa pone onda ben. Del temo sue pie senz una vidi. Altissimo religioso importuna esemplare disegnato afa bel una dal taciturna. Sai cio ora oro soli dire rete pini usci. Ne struggeva ginocchia conquista me rapimento. "
+            },
+            {
+                name : "Victoria Valdez",
+                imgSrc : "/images/person3.jpg",
+                position : "ui designer",
+                description : "Sole uomo mai puo essa pone onda ben. Del temo sue pie senz una vidi. Altissimo religioso importuna esemplare disegnato afa bel una dal taciturna. Sai cio ora oro soli dire rete pini usci. Ne struggeva ginocchia conquista me rapimento. "
+            },
+            {
+                name : "Beverly Little",
+                imgSrc : "/images/person4.jpg",
+                position : "data scientist",
+                description : "Sole uomo mai puo essa pone onda ben. Del temo sue pie senz una vidi. Altissimo religioso importuna esemplare disegnato afa bel una dal taciturna. Sai cio ora oro soli dire rete pini usci. Ne struggeva ginocchia conquista me rapimento. "
+            },
+         ]
+         let socialMediaClasses = ["fa-facebook-f", "fa-twitter","fa-twitter"]
+         //selecting the holder for team members cards
+         let teamMembersHolder = this.document.querySelector("#team-holder")
+         
+         //Filling the team members container
+         arrayOfTeamMembers.forEach(person => {
+            let articleElement = this.document.createElement('section')
+            articleElement.classList.add("team-member-card")
+            let imgElement  = this.document.createElement('img')
+            imgElement.setAttribute('src', `${person.imgSrc}`)
+            articleElement.appendChild(imgElement)
+            let headingElement = this.document.createElement('h3')
+            let nameText = this.document.createTextNode(`${person.name}`)
+            headingElement.append(nameText)
+            articleElement.appendChild(headingElement)
+            let spanElement = this.document.createElement('span')
+            let positionText = this.document.createTextNode(`${person.position}`)
+            spanElement.append(positionText)
+            articleElement.appendChild(spanElement)
+            let paragraphElement = this.document.createElement('p')
+            let descriptionText = this.document.createTextNode(`${person.description}`)
+            paragraphElement.append(descriptionText)
+            articleElement.appendChild(paragraphElement)
+            socialMediaClasses.forEach(name => {
+                let i = this.document.createElement('i')
+                i.classList.add("fab", `${name}`)
+                articleElement.appendChild(i)
+            })
+            teamMembersHolder.appendChild(articleElement)
+         })
 })
+
