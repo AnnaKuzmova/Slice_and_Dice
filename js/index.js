@@ -39,6 +39,7 @@ window.addEventListener('load', function(){
                 description : "Hubo emma ma suma sofa sola cola es. Id sebastian correrias mi procuraba. Pierna la bebida ir percal. Rodeabase propiedad dominante bonifacio."
             }
         ]
+        
         let featuresHolder = this.document.querySelector('#feature-section')
         
         arrayOfFeatures.forEach(item => {
@@ -58,5 +59,40 @@ window.addEventListener('load', function(){
             
             //after fully creating the feature card, we append it to the feature's holder
             featuresHolder.appendChild(articleElement)
+        })
+
+        /*Creating array of work-images's path to fill into the work section holder*/
+        let arrayOfWorkImages = [
+            "/images/work1.jpg",
+            "/images/work2.jpg",
+            "/images/work3.jpg",
+            "/images/work4.jpg",
+            "/images/work5.jpg",
+            "/images/work6.jpg",
+            "/images/work7.jpg",
+            "/images/work8.jpg",
+        ]
+
+        //Selecting the container/holder for the images
+        let workImagesHolder = this.document.querySelector("#work-section")
+        
+        //Filling the container/holder
+        arrayOfWorkImages.forEach(img => {
+            let divElement = this.document.createElement("div")
+            let imgElement = this.document.createElement("img")
+            imgElement.setAttribute('src', `${img}`)
+            divElement.appendChild(imgElement)
+            let sectionElement = this.document.createElement("section")
+            sectionElement.classList.add("work-info")
+            let titleElement = this.document.createElement("h3")
+            let titleText = this.document.createTextNode('project name')
+            titleElement.appendChild(titleText)
+            sectionElement.appendChild(titleElement)
+            let pElement = this.document.createElement("p")
+            let pText = this.document.createTextNode("user interface design")
+            pElement.appendChild(pText)
+            sectionElement.appendChild(pElement)
+            divElement.appendChild(sectionElement)
+            workImagesHolder.appendChild(divElement)
         })
 })
