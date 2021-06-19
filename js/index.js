@@ -123,7 +123,7 @@ window.addEventListener('load', function(){
                 description : "Sole uomo mai puo essa pone onda ben. Del temo sue pie senz una vidi. Altissimo religioso importuna esemplare disegnato afa bel una dal taciturna. Sai cio ora oro soli dire rete pini usci. Ne struggeva ginocchia conquista me rapimento. "
             },
          ]
-         let socialMediaClasses = ["fa-facebook-f", "fa-twitter","fa-twitter"]
+         let socialMediaClasses = ["fa-facebook-f", "fa-twitter","fa-linkedin"]
          //selecting the holder for team members cards
          let teamMembersHolder = this.document.querySelector("#team-holder")
          
@@ -153,5 +153,39 @@ window.addEventListener('load', function(){
             })
             teamMembersHolder.appendChild(articleElement)
          })
+
+         //Creating testimonals quotes in an array
+         let testimonals = [
+             {
+                 text : 'Implorare ha bisognava sottratta levandosi levandoti tu sottrarre. Nascondere affaticato pel ricomincia sollevando puo sei ora. Dorata gli sfugge par pei inerte quindi.',
+                 person : 'Alexander Yukov, software developer at horizon'
+             },
+             {
+                 text : 'Che diventi dio ritardo cio piu bisogna seguivo. Ad mistero vivente se volutta vecchia. Gabbie sui colore ora doveva saluta. Fame suo mine nego buio udi.',
+                 person : 'susan sims, interaction designer at xyz'
+             },
+             {
+                 text : 'Affinita guardato ginocchi ove oro scolpita eri apparire partirsi. Voto lo ella solo in il sa ieri solo tebe. Sul questo eri divano ancora gloria stanco riposi.',
+                 person : 'sofia vergara, ui designer at duffy inc'
+             }, 
+             {
+                 text : 'Volutta turbini rimanga pulsare maestro poi amo che. Sgomento impronta mantenga ch ex. Dalbo chi buona vivra arida molto siedi poi. Importa dattero.',
+                 person : 'adam abrams, ceo of solutions inc'
+             },
+             {
+                 text : 'Lo narcotico in seguitare ti taciturna. Dov pel busto forma petto. Sta una pensieroso sorridente mio bianchezza. Pie san.',
+                 person : 'liza smith, data scientist at yuko inc'
+             }
+         ]
+
+         let quote = this.document.querySelector(".testimonal-text-holder blockquote")
+         let personDetails = this.document.querySelector(".testimonal-text-holder span")
+         
+         //Carousel animation-implementation
+
+
+        
+        
+
 })
 

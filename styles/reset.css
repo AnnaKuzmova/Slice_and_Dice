@@ -51,4 +51,5 @@ button {
     color: var(--white);
     text-transform: uppercase;
     border-radius: 3px;
+    cursor: pointer;
 }

@@ -210,6 +210,64 @@ i.fab {
     border: var(--gray) 1px solid;
 }
 
+/*Styling the testimonal holder, image and texts*/
+
+#testimonals {
+    background-color: var(--purple);
+}
+
+#testimonals img {
+    width: 50%;
+}
+
+.testimonal-text-holder {
+   padding: 5em 0 0 3em;
+}
+
+.testimonal-text-holder blockquote {
+    margin-bottom: 0.5em;
+    font-family: var(--font-cardo);
+    font-size: 1.9rem;
+    color: var(--white);
+    transition: all .4s linear;
+}
+
+.testimonal-text-holder span {
+    font-family: var(--font-raleway);
+    font-size: 0.8rem;
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .4s linear;
+}
+
+.carousel-controls {
+    margin-top: 5em;
+    text-align: center;
+    color: var(--gray);
+}
+
+/*Styles for the download-section*/
+.download-section {
+    padding: 5em 0;
+    text-align: center;
+}
+
+.download-section h2 {
+    margin-bottom: 0.2em;
+    font-family: var(--font-raleway);
+    font-weight: normal;
+    font-size: 1.9rem;
+    color: var(--black);
+}
+
+.download-section p {
+    margin-bottom: 2em;
+    font-family: var(--font-raleway);
+    font-weight: bold;
+    color: var(--black);
+}
+
 
 
 
@@ -227,5 +285,6 @@ i.fab {
         transform: translateY(0);
     }
 }
+
 
 
