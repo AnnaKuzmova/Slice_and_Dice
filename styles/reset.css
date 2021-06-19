@@ -1,22 +1,5 @@
-/*In reset.css  browser default settings are cleared*/
 
-* {
-    margin: 0;
-    padding: 0;
-}
 
-a {
-    text-decoration: none;
-}
-
-ul,li {
-    list-style: none;
-}
-
-button {
-    border: none;
-    background-color: transparent;
-}
 
 /*Select the root element with :root, which is the html tag to declare global variables for further use*/
 :root {
@@ -33,6 +16,30 @@ button {
  --dark-blue : #313455 ;
 }
 
+/*In reset.css  browser default settings are cleared*/
+/*Setting the font family to raleway for every element because it is the main one*/
+/*In case an element must be styled with other font, it can be rewritten*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-raleway);
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+ul,li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
 /*Custom css selectors for multiple re-use */
 
 .center {
@@ -42,6 +49,7 @@ button {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .button {
@@ -54,4 +62,13 @@ button {
     text-transform: uppercase;
     border-radius: 3px;
     cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.button:hover {
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--red);
+    border: var(--red) 2px solid;
+    transition: all .3s ease-in;
 }

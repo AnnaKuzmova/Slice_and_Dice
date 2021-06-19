@@ -1,4 +1,18 @@
 window.addEventListener('load', function(){
+
+    /*Showing and hiding the secondary navigation*/
+    let secondaryNavigation = this.document.querySelector('.secondary-navigation')
+    this.document.addEventListener('scroll', function(e){
+      
+        if(window.innerWidth > 765){
+            if(window.scrollY > 300) {
+                secondaryNavigation.style.top = '0'
+            } else {
+                secondaryNavigation.style.top = '-20%'
+            }
+          }
+    })
+    
     /*
         Creating array of objects in which we store
         data related to every feature section.
