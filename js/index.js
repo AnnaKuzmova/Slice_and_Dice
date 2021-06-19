@@ -194,10 +194,23 @@ window.addEventListener('load', function(){
 
          let quote = this.document.querySelector(".testimonal-text-holder blockquote")
          let personDetails = this.document.querySelector(".testimonal-text-holder span")
-         
+         let circles = Array.from(this.document.querySelectorAll(".carousel-controls i"))
          //Carousel animation-implementation
 
+         circles.forEach(circle => {
+             circle.addEventListener('click', function(){
+                 let current = this
+                 let index = current.getAttribute('index')
+                 circles.forEach(cr => cr.classList.remove('active'))
+                 current.classList.add('active')
+                 quote.innerHTML = testimonals[index].text
+                 personDetails.innerHTML = testimonals[index].person
+             })
+         })
+        
+           
 
+        
         
         
 
