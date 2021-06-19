@@ -4,7 +4,7 @@ window.addEventListener('load', function(){
     let secondaryNavigation = this.document.querySelector('.secondary-navigation')
     this.document.addEventListener('scroll', function(e){
       
-        if(window.innerWidth > 765){
+        if(window.innerWidth > 1100){
             if(window.scrollY > 300) {
                 secondaryNavigation.style.top = '0'
             } else {
