@@ -118,7 +118,7 @@
     transition: .3s all linear;
 }
 
-.work-holder div:hover .work-info p,h3 {
+.work-holder div:hover .work-info p {
     animation: slideUp ease-in-out .4s forwards;
 }
 
@@ -149,7 +149,7 @@
     font-weight: bold;
     font-size: 0.9rem;
     text-transform: uppercase;
-    opacity: 0;
+    opacity: 1;
 }
 
 .work-info p {
@@ -268,7 +268,63 @@ i.fab {
     color: var(--black);
 }
 
+/*Styling the footer and footer's content*/
 
+#site-main-footer {
+    background-color: var(--blue);
+}
+
+.footer-content.flex {
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5em 0;
+}
+
+.footer-content.flex article {
+    width: 30%;
+    text-align: center;
+}
+
+.footer-content.flex article h3 {
+    margin-bottom: .7em;
+    font-family: var(--font-raleway);
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.footer-content.flex article p {
+    font-family: var(--font-raleway);
+    font-weight: lighter;
+    font-size: .9rem;
+    color: var(--gray);
+}
+
+.footer-content.flex article i {
+    color: var(--white);
+    border: var(--white) 2px solid;
+}
+
+.author-information {
+    padding: 2em 0;
+    background-color: var(--dark-blue);
+    text-align: center;
+}
+
+.author-information p {
+    font-family: var(--font-raleway);
+    font-size: .9rem;
+    color: var(--gray);
+}
+
+.author-information p i {
+    color: var(--red);
+}
+
+.author-name {
+    color: var(--white);
+}
 
 
 

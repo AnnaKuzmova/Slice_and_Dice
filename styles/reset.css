@@ -29,6 +29,8 @@ button {
  --red : #e84546;
  --purple : #523549;
  --gray : #c2c6c9;
+ --blue : #3a3e63;
+ --dark-blue : #313455 ;
 }
 
 /*Custom css selectors for multiple re-use */
