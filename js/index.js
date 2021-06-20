@@ -172,42 +172,85 @@ window.addEventListener('load', function(){
          let testimonals = [
              {
                  text : 'Implorare ha bisognava sottratta levandosi levandoti tu sottrarre. Nascondere affaticato pel ricomincia sollevando puo sei ora. Dorata gli sfugge par pei inerte quindi.',
-                 person : 'Alexander Yukov, software developer at horizon'
+                 person : 'Alexander Yukov, software developer at horizon',
+                 image : '/images/carousel-3.jpg'
              },
              {
                  text : 'Che diventi dio ritardo cio piu bisogna seguivo. Ad mistero vivente se volutta vecchia. Gabbie sui colore ora doveva saluta. Fame suo mine nego buio udi.',
-                 person : 'susan sims, interaction designer at xyz'
+                 person : 'susan sims, interaction designer at xyz',
+                 image : '/images/carousel-1.jpg'
              },
              {
                  text : 'Affinita guardato ginocchi ove oro scolpita eri apparire partirsi. Voto lo ella solo in il sa ieri solo tebe. Sul questo eri divano ancora gloria stanco riposi.',
-                 person : 'sofia vergara, ui designer at duffy inc'
+                 person : 'sofia vergara, ui designer at duffy inc',
+                 image : '/images/carousel-2.jpg'
              }, 
              {
                  text : 'Volutta turbini rimanga pulsare maestro poi amo che. Sgomento impronta mantenga ch ex. Dalbo chi buona vivra arida molto siedi poi. Importa dattero.',
-                 person : 'adam abrams, ceo of solutions inc'
+                 person : 'adam abrams, ceo of solutions inc',
+                 image : '/images/carousel-4.jpg'
              },
              {
                  text : 'Lo narcotico in seguitare ti taciturna. Dov pel busto forma petto. Sta una pensieroso sorridente mio bianchezza. Pie san.',
-                 person : 'liza smith, data scientist at yuko inc'
+                 person : 'liza smith, data scientist at yuko inc',
+                 image : '/images/carousel-5.jpg'
              }
          ]
 
          let quote = this.document.querySelector(".testimonal-text-holder blockquote")
          let personDetails = this.document.querySelector(".testimonal-text-holder span")
+         let imageTag = this.document.querySelector("#testimonals img")
          let circles = Array.from(this.document.querySelectorAll(".carousel-controls i"))
+         let index = 0;
          //Carousel animation-implementation
+
+         //Base function for changing the carousel content with one argument - index value
+
+         function changeContent(index) {
+            quote.innerHTML = testimonals[index].text
+            personDetails.innerHTML = testimonals[index].person
+            imageTag.setAttribute('src', `${testimonals[index].image}`)
+         }
 
          circles.forEach(circle => {
              circle.addEventListener('click', function(){
                  let current = this
-                 let index = current.getAttribute('index')
+                 index = current.getAttribute('index')
                  circles.forEach(cr => cr.classList.remove('active'))
                  current.classList.add('active')
-                 quote.innerHTML = testimonals[index].text
-                 personDetails.innerHTML = testimonals[index].person
+                 changeContent(index)
              })
          })
-        
+
+         //Selecting the arrows
+         let nextTesimonalDataButton = this.document.querySelector('.fas.fa-chevron-right')
+         let previoustTesimonalDataButton = this.document.querySelector('.fas.fa-chevron-left')
+
+        //Implementing the arrows's functuonality
+
+        nextTesimonalDataButton.addEventListener('click', () => {
+            if(index == testimonals.length) {
+                index = 0
+            }
+
+            circles.forEach(cr => cr.classList.remove('active'))
+            let currentCirlce = circles.find(cr => cr.getAttribute('index') == index)
+            currentCirlce.classList.add('active')
+            changeContent(index)
+            index++
+        })
+
+        previoustTesimonalDataButton.addEventListener('click', () => {
+            if(index < 0) {
+                index = testimonals.length - 1
+            }
+
+            circles.forEach(cr => cr.classList.remove('active'))
+            let currentCirlce = circles.find(cr => cr.getAttribute('index') == index)
+            currentCirlce.classList.add('active')
+            changeContent(index)
+            index--
+        })
            
 
         

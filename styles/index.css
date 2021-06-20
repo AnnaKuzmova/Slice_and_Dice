@@ -235,9 +235,38 @@ i.fab {
 }
 
 .testimonal-text-holder {
+    position: relative;
     width: 40%;
-   padding: 5em 0 0 3em;
+    padding: 5em 0 0 3em;
 }
+
+.fas.fa-chevron-right,.fas.fa-chevron-left {
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    display: block;
+    color:var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s all ease-in;
+}
+
+.fas.fa-chevron-right {
+    left: 100%;
+ }
+
+ /*Instead of using ',' to select both arrows, i select them separately (not working for some reasong)*/
+ /*To do: Research the problem and fix it*/
+
+.testimonal-text-holder:hover  .fas.fa-chevron-right {
+    animation: slideUp .3s ease-in forwards;
+}
+
+.testimonal-text-holder:hover  .fas.fa-chevron-left {
+    animation: slideUp .3s ease-in forwards;
+}
+
 
 .testimonal-text-holder blockquote {
     margin-bottom: 0.5em;
